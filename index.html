@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puffin Colors WebView</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="toolbar left">
+      <button class="tool-button active" data-tool="pen">🖊️</button>
+      <button class="tool-button" data-tool="brush">🖌️</button>
+      <button class="tool-button" data-tool="eraser">🧽</button>
+      <button class="tool-button" data-tool="undo">↩️</button>
+      <button class="tool-button" data-tool="save">💾</button>
+      <button class="tool-button" data-tool="smartfill" id="smartFillBtn">🧠</button>
+    </div>
+
+    <div id="drawingArea">
+      <canvas id="drawCanvas"></canvas>
+      <object id="svgImage" type="image/svg+xml" data="Puffin detailed.svg"></object>
+    </div>
+
+    <div class="toolbar right" id="colorPalette">
+      <button class="color-swatch" data-color="#f00" style="background:#f00"></button>
+      <button class="color-swatch" data-color="#0f0" style="background:#0f0"></button>
+      <button class="color-swatch" data-color="#00f" style="background:#00f"></button>
+      <button class="color-swatch" data-color="#ff0" style="background:#ff0"></button>
+      <button class="color-swatch" data-color="#0ff" style="background:#0ff"></button>
+      <button class="color-swatch" data-color="#f0f" style="background:#f0f"></button>
+      <button class="color-swatch" data-color="#000" style="background:#000"></button>
+      <button class="color-swatch" data-color="#fff" style="background:#fff; border:1px solid #ccc"></button>
+    </div>
+  </div>
+
+  <script src="script_enhanced.js"></script>
+</body>
+</html>

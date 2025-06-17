@@ -1,0 +1,74 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: #f2f2f2;
+  gap: 10px;
+  z-index: 10;
+}
+
+.toolbar.left {
+  justify-content: flex-start;
+}
+
+.toolbar.right {
+  justify-content: flex-start;
+  margin-left: auto;
+}
+
+.tool-button,
+.color-swatch {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tool-button.active {
+  box-shadow: 0 0 0 3px #4dc4e6;
+}
+
+#drawingArea {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+#drawCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#svgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
